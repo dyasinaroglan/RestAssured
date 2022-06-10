@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 
 
-public class ZippoTest {
+public class ZippoTest1 {
 
     @Test
     public void test1(){
