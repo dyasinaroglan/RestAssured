@@ -1,3 +1,5 @@
+package restAssureCourse;
+
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -14,15 +16,18 @@ public class ZippoTest2 {
 
     @Test
     public void pathParamTest(){
+        /*
         given().when().get("http://api.zippopotam.us/us/90210").then().statusCode(200).body("places.size()", equalTo(1));
         //ya da
         given().when().get("http://api.zippopotam.us/us/90210").then().statusCode(200).body("places", hasSize(1)).log().body();
+
+         */
 
         given().pathParam("country", "us").
                 pathParam("postalCode", "90210").
                 log().uri().
                 when().get("http://api.zippopotam.us/{country}/{postalCode}").
-                then().statusCode(200).body("places.size()", equalTo(1));
+                then().statusCode(200).body("places.size()", equalTo(1)).log().body();
 
         //https://gorest.co.in/public-api/users?page=1
 
