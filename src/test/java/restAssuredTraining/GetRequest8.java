@@ -47,6 +47,7 @@ public class GetRequest8 {
 
         System.out.println(response.jsonPath().getString("data.employee_name[-1]"));
         Assert.assertEquals("Doris Wilder", response.jsonPath().getString("data.employee_name[-1]"));
+        Assert.assertTrue(response.jsonPath().getList("data.employee_name").contains("Rhona Davidson"));
 
 
     }
