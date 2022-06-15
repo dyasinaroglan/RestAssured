@@ -34,11 +34,11 @@ public class ZippoTest2 {
     }
     @Test
     public void queryParamTest(){
-        int page1 = 1;
 
-        given().queryParam("page", page1).
+
+        given().queryParam("page", 1).
                 log().uri().
-                when().get("https://gorest.co.in/public-api/users").  ////https://gorest.co.in/public-api/users?page=1 page=1 siliyoruz
+                when().get("https://gorest.co.in/public-api/users").  // https://gorest.co.in/public-api/users?page=1 page=1 siliyoruz
                 then().log().body().statusCode(200).body("data[0].name", equalTo("Gouranga Trivedi I"));
 
 

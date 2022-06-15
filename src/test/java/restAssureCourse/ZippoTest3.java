@@ -23,7 +23,6 @@ public class ZippoTest3 {
 
     //http://api.zippopotam.us/us/90210
 
-
         responseSpecification = new ResponseSpecBuilder().
                 expectStatusCode(200).
                 expectContentType(ContentType.JSON).
@@ -52,6 +51,5 @@ public class ZippoTest3 {
     public void checkPlacesArraySizeRequestSpecification(){
         given().spec(requestSpecification).when().get("/us/90210").then().body("places", hasSize(1)).spec(responseSpecification);
     }
-
 
 }
