@@ -1,4 +1,4 @@
-package pojoClass.pojo;
+package restAssureCourse.pojoClass.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

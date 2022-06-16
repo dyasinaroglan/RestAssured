@@ -1,8 +1,8 @@
-package pojoClass;
+package restAssureCourse.pojoClass;
 
 import org.testng.annotations.Test;
-import pojoClass.pojo.Location;
-import pojoClass.pojo.Places;
+import restAssureCourse.pojoClass.pojo.Location;
+import restAssureCourse.pojoClass.pojo.Places;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package goRest.pojoModel;
+package restAssureCourse.goRest.pojoModel;
 
 public class User {
 

@@ -1,9 +1,9 @@
-package goRest;
+package restAssureCourse.goRest;
 
-import goRest.pojoModel.User;
+import restAssureCourse.goRest.pojoModel.User;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -71,11 +71,11 @@ public class GoRestUserTest {
 
 
 
-    private String randomEmail(){
+    public String randomEmail(){
         String userEmail = RandomStringUtils.randomAlphabetic(8).toLowerCase(Locale.ROOT)+ "@gmail.com";
         return userEmail;
     }
-    private String getRandomNme(){
+    public String getRandomNme(){
         String userName = RandomStringUtils.randomAlphabetic(8).toLowerCase(Locale.ROOT);
         return userName;
     }
@@ -125,5 +125,26 @@ public class GoRestUserTest {
                 .contentType(ContentType.JSON);
 
 
+    }
+    @Test
+    public void test3(){
+
+        Response response =
+                given()
+
+                        .contentType(ContentType.JSON)
+                        .when()
+                        .get("https://gorest.co.in/public-api/users")
+                        .then()
+                        .statusCode(200)
+                        .contentType(ContentType.JSON)
+                        .extract().response();
+
+        User user = response.jsonPath().getObject("data[1]", User.class);
+        System.out.println(user.getName());
+        List<User> userList = response.jsonPath().getList("data", User.class);
+        int pages = response.jsonPath().getInt("meta.pagination.pages");
+
+        System.out.println(userList.get(3).getName());
     }
 }
