@@ -3,13 +3,14 @@ package restAssuredTraining.getRequest14;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class FakeTestData {
 
     public HashMap<String, Object> setupTestData() {
 
-        HashMap<String, Object> onBirinci = new HashMap<>();
+        HashMap<String, Object> onBirinci = new LinkedHashMap<>();
         onBirinci.put("id", 11);
         onBirinci.put("employee_name", "Jena Gaines");
         onBirinci.put("employee_salary", 90560);
