@@ -1,4 +1,4 @@
-package restAssuredTraining;
+package restAssuredTraining.getRequest2;
 
 import io.restassured.http.ContentType;
 import io.restassured.internal.http.HttpResponseDecorator;

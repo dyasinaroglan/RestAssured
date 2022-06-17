@@ -1,4 +1,4 @@
-package restAssuredTraining;
+package restAssuredTraining.getRequest13;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;

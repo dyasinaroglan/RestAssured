@@ -1,4 +1,4 @@
-package restAssuredTraining;
+package restAssuredTraining.gestRequest4;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
