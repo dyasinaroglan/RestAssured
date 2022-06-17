@@ -88,7 +88,7 @@ public class CountryTest {
                 .put("/school-service/api/countries/")
                 .then()
                 .statusCode(200).log().body()
-                .body("code", equalTo(country.getName()))
+                .body("code", equalTo(country.getCode()))
                 .body("name", equalTo(country.getName()))
                 .extract().response();
 
@@ -106,8 +106,7 @@ public class CountryTest {
                 .then()
                 .statusCode(200)
                 .contentType(emptyOrNullString());
-
-
     }
+
 
 }

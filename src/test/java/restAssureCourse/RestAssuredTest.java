@@ -15,7 +15,11 @@ public class RestAssuredTest {
 
     @Test
     public void singleBddTestUser(){
-        given().when().get("https://reqres.in/api/users/2").then().statusCode(200).body("data.first_name",equalTo("Janet")).log().body().
+        given()
+                .when()
+                .get("https://reqres.in/api/users/2")
+                .then().statusCode(200)
+                .body("data.first_name",equalTo("Janet")).log().body().
                 time(lessThan(2000L)); // 2 saniyeden daha az ise fail et demek
 
     }

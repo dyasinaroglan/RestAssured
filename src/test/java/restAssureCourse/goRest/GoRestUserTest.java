@@ -67,10 +67,6 @@ public class GoRestUserTest {
         System.out.println(userID);
     }
 
-
-
-
-
     public String randomEmail(){
         String userEmail = RandomStringUtils.randomAlphabetic(8).toLowerCase(Locale.ROOT)+ "@gmail.com";
         return userEmail;
