@@ -1,4 +1,4 @@
-package deneme;
+package restAssureCourse.deneme;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;

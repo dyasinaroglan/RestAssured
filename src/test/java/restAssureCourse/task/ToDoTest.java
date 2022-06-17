@@ -1,7 +1,7 @@
-package task;
+package restAssureCourse.task;
 
 import org.testng.annotations.Test;
-import task.pojoClass.PojoToDo;
+import restAssureCourse.task.pojoClass.PojoToDo;
 
 import java.util.Arrays;
 import java.util.List;

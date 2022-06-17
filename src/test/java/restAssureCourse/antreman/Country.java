@@ -1,4 +1,4 @@
-package antreman;
+package restAssureCourse.antreman;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

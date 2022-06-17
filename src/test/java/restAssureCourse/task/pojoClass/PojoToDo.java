@@ -1,4 +1,4 @@
-package task.pojoClass;
+package restAssureCourse.task.pojoClass;
 
 public class PojoToDo {
 
